@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking: Free Consultation | iSeul Aesthetic Beauty</title>
+    <link rel="stylesheet" href="iseul.css">
+    <!--Done by JANICE NG ZHENG YEN-->
+</head>
+<body>
+    <header id="main-header">
+        <img src="img/logo.png" alt="iSeul Aesthetic Beauty Logo" id="header-logo">
+        <h1>iSeul Aesthetic Beauty</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services</a>
+                <div class="dropdown-content">
+                    <a href="lifting.html">Anti-Aging</a>
+                    <a href="eye.html">Eye Surgery</a>
+                    <a href="nose.html">Nose Surgery</a>
+                    <a href="contouring.html">Facial Contouring</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="explore.html">Explore</a>
+                <div class="dropdown-content">
+                    <a href="faq.html">FAQ</a>
+                    <a href="gallery.html">Before & After Gallery</a>
+                    <a href="reviews.html">Reviews</a>
+
+                </div>
+            </li>
+            <li><a href="doctors.html">Doctors </a></li>
+            <li class="dropdown">
+                <a href="contact.html">Contact Us</a>
+                <div class="dropdown-content">
+                    <a href="booking.html">Booking</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="page-title">Book Your Free Consultation | 무료 상담 예약</h2>
+        
+        <div class="booking-form-container">
+            <p class="main-subtitle" style="text-align: center; margin-bottom: 20px; color: #555;">Please fill out the form below to schedule a private consultation. Our coordinator will contact you within 24 hours.</p>
+
+            <form action="submit_form.php" method="POST" class="booking-form">
+                <div class="form-group">
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone/WhatsApp:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+82 10-XXXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred_service">Preferred Service:</label>
+                    <select id="preferred_service" name="preferred_service">
+                        <option value="general">General Consultation (일반 상담)</option>
+                        <option value="lifting">Anti-Aging & Lifting</option>
+                        <option value="eye">Eye Surgery</option>
+                        <option value="nose">Nose Surgery</option>
+                        <option value="contouring">Facial Contouring</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message / Questions:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="e.g., Preferred dates, specific concerns, etc."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Submit Request" class="submit-button">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; 2025 iSeul Aesthetic Beauty<br>
+        123 Gangnam-daero, Gangnam-gu, Seoul, Republic of Korea (06132)<br>
+        Phone: <a href="tel:+8225551234">+82 2-555-1234</a> | WhatsApp/WeChat: +82 10-9876-5432<br>
+        Email: <a href="mailto:contact@iseulbeauty.com">contact@iseulbeauty.com</a>
+    </footer>
+</body>
+</html>

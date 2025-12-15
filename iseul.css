@@ -1,0 +1,1075 @@
+/*
+ ========================================
+ BASE STYLES & RESET (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Universal Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* Set a font stack for visual consistency */
+    font-family: 'Times New Roman', Arial, serif;
+}
+
+/* Base body styles */
+body{
+    background-color: #F0F8FF;
+    color: #333; 
+    line-height: 1.65;
+}
+
+/* Main page titles styling */
+.page-title {
+    color: #00BFFF;
+    font-size: 2.8em; 
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Subtitles or descriptive text below the main title */
+.main-subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto 30px auto;
+    font-size: 1.15em; 
+    color: #555;
+}
+
+/*
+ ========================================
+ HEADER & NAVIGATION (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Header container styling */
+#main-header {
+    background-color: #F0F8FF; 
+    height: 110px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 0 50px; 
+}
+
+/* Logo image size and spacing */
+#header-logo {
+    width: 90px;
+    height: 90px; 
+    margin-right: 25px; 
+}
+
+h1{
+    padding: 0;
+    font-size: 3em; 
+    color: #00BFFF; 
+}
+
+/* Navigation bar main container */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00BFFF;
+    padding: 15px 0;
+}
+
+/* List of navigation links */
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+/* Positioning context for dropdown menus */
+.nav-links li{
+    position: relative; 
+}
+
+/* Styling for all navigation anchor links */
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.2s;
+}
+
+/* Hover state styling for navigation links */
+.nav-links a:hover{ 
+    background-color: #FF69B4;
+    border-radius: 3px;
+}
+
+/* Dropdown Menu container */
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px; 
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    z-index: 10;
+}
+
+/* Links inside the dropdown menu */
+.dropdown-content a{
+    display: block;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* Dropdown link hover state */
+.dropdown-content a:hover{
+    background-color: #FF69B4;
+    color: white;
+}
+
+/* Show dropdown content when parent list item is hovered */
+.nav-links li:hover .dropdown-content{ 
+    display: block;
+}
+
+/*
+ ========================================
+ MAIN LAYOUT & COMMON COMPONENTS (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Main content wrapper background */
+main {
+    background-color: #FFFFF0; /* Ivory/Cream background for main sections */
+}
+
+/* Call-to-Action (CTA) button styling */
+.btn-cta-primary, .cta-button, .submit-button {
+    display: inline-block;
+    padding: 12px 30px; 
+    border-radius: 5px;
+    background-color: #FF69B4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+/* CTA hover effect */
+.btn-cta-primary:hover, .cta-button:hover, .submit-button:hover{
+    background-color: #e5669c;
+}
+
+/* Hero Section Base Styling*/
+.hero-clinic, .hero-detail {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Background image for hero sections */
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Overlay to darken background and make text readable */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 191, 255, 0.5);
+    z-index: 2;
+}
+
+/* Content sitting on top of the overlay */
+.hero-content, .hero-content-detail {
+    position: relative;
+    z-index: 3;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+}
+
+/* Headings within the hero content */
+.hero-content h2, .hero-content-detail h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Styling for embedded iframes */
+iframe {
+    border: none;
+}
+
+/* Paragraph styling in detail sections */
+.section-detail p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Generic grid wrapper padding */
+.grid-detail {
+    padding: 20px 0;
+}
+
+/* Image alignment within the grid */
+.grid-image-wrapper {
+    text-align: center;
+}
+
+/* Max size constraint for images in grids */
+.grid-image-wrapper, .grid-image {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Three-column layout for 'Pillars' section (About Us page) */
+.pillars-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+/* Individual pillar card styling */
+.pillar-card {
+    width: calc(33.33% - 20px); 
+    text-align: center;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border-top: 5px solid #008080;
+}
+
+/* Pillar card hover effect */
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Pillar card headings */
+.pillar-card h4 {
+    color: #00BFFF;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    min-height: 35px; 
+}
+
+/* Styling for the pillar icon images */
+.pillar-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.cta-section {
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/* Wrapper for general content (max width/centering) */
+.main-content-wrapper {
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+ ========================================
+ HOME PAGE & SERVICE PREVIEW (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Four-column layout for service previews on the Home page */
+.services-preview {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
+    padding: 50px 50px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Individual service card styling */
+.lifting-service, .eye-service, .nose-service, .contouring-service {
+    width: calc(25% - 15px);
+    min-width: 200px; 
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    padding: 20px 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effects for service cards */
+.lifting-service:hover, .eye-service:hover, .nose-service:hover, .contouring-service:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings in service preview cards */
+.services-preview h2 {
+    font-size: 1.5em;
+    color: #00BFFF;
+    margin-bottom: 15px;
+    min-height: 50px; 
+}
+
+/* Styling for images within service preview cards */
+.service-img{
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 5px;
+    border: 1.5px solid #FFC0CB;
+}
+
+/* Detailed section wrapper for padding and max width */
+.section-detail {
+    padding: 40px 80px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Flexbox setup for the two-column content grid */
+.grid-detail {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Width distribution for grid columns */
+.grid-text, .grid-image-wrapper {
+    width: 50%; 
+    line-height: 1.7;
+}
+
+/* Reverses the layout direction for alternating sections */
+.reverse-layout .grid-detail {
+    flex-direction: row-reverse;
+}
+
+/* Heading styling in grid text content */
+.grid-text h3 {
+    color: #00BFFF;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Image styling in grid content */
+.grid-image {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for lists of lifting solutions/procedures */
+.lifting-solutions-list {
+    list-style: none; 
+    padding: 0;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Individual item styling in the solutions list */
+.lifting-solutions-list li {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #008080; 
+    transition: box-shadow 0.3s;
+}
+
+/* Hover effect for list items */
+.lifting-solutions-list li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for individual list items */
+.lifting-solutions-list h4 {
+    color: #00BFFF;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+/*
+ ========================================
+ SERVICES PAGE & COMPARISON TABLE (LEE XIN JIE)
+ ========================================
+ */
+
+.hero-services {
+    background-color: #F0F8FF;
+    padding: 70px 20px 40px;
+    text-align: center;
+    border-bottom: 5px solid #00BFFF;
+}
+
+.hero-services h2 {
+    color: #00BFFF;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-services p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.grid-services {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 25px;
+    padding: 50px 50px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Generic card image size */
+.card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background images for service cards*/
+.grid-services .card-service-full:nth-child(1) .card-image {
+    background-image: url('img/liftingtech.jpg');
+}
+
+.grid-services .card-service-full:nth-child(2) .card-image {
+    background-image: url('img/eye1.png');
+}
+
+.grid-services .card-service-full:nth-child(3) .card-image{
+    background-image: url('img/nose1.png');
+}
+
+.grid-services .card-service-full:nth-child(4) .card-image{
+    background-image: url('img/explore-contour.jpg');
+}
+
+/* Content wrapper inside service cards */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Paragraph text within card content */
+.card-content p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Styling for the comparison table section */
+.comparison-table {
+    padding: 60px 50px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+/* Comparison table heading */
+.comparison-table h2 {
+    color: #00BFFF;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Main table structure and layout */
+.service-data-table {
+    width: 90%; 
+    max-width: 1100px;
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header styling */
+.service-data-table thead th {
+    background-color: #00BFFF;
+    color: white;
+    padding: 18px 15px;
+    font-size: 1.1em;
+    border: none;
+}
+
+/* Table body cell styling */
+.service-data-table tbody td {
+    padding: 15px 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 1em;
+    color: #333;
+}
+
+.service-data-table tbody tr:nth-child(even) {
+    background-color: #F8F8FF;
+}
+
+/* Safety Media & CTA section */
+.safety-media-cta {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px;
+    gap: 60px;
+    background-color: #F0FFF0;
+    align-items: center;
+}
+.media-container, .safety-points {
+    width: 50%;
+}
+
+/* Video/Media container styling */
+.media-container iframe {
+    width: 100%;
+    height: 350px; 
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Safety points section header */
+.safety-points h2 {
+    color: #008080; 
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 10px;
+}
+
+/* Safety checklist list styling */
+.safety-checklist {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Individual safety checklist item */
+.safety-checklist li {
+    padding: 12px 0 12px 35px;
+    font-size: 1.1em;
+    position: relative;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+/* Custom checkmark icon using ::before pseudo-element */
+.safety-checklist li::before { 
+    content: "✔";
+    color: #008080;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*
+ ========================================
+ EXPLORE PAGE (LEW HEE CHING)
+ ========================================
+ */
+
+/* Three-column layout for exploration cards */
+.explore-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding: 50px 80px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Individual exploration card base styling */
+.explore-card {
+    width: calc(33.33% - 20px); 
+    min-height: 00px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Explore card hover effect */
+.explore-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling within explore cards */
+.explore-icon-image {
+    position: relative; 
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    margin: 0 auto;
+    border-radius: 12px 12px 0 0; 
+    opacity: 1; 
+}
+
+/* Content section below the image in explore cards */
+.explore-card-content {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    color: white;
+    min-height: 150px;
+}
+
+/* Headings in explore card content */
+.explore-card-content h3 {
+    color: #FF69B4;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+/* Paragraphs in explore card content */
+.explore-card-content p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+/* List for achievements on the Explore page */
+.achievements-list {
+    list-style: none; 
+    padding: 0;
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+/* Individual achievement item styling */
+.achievements-list li {
+    background-color: #F8F8FF;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 5px solid #008080;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Achievement heading styling */
+.achievements-list h4 {
+    color: #00BFFF;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+/* Grid detail padding */
+.grid-detail {
+    padding: 20px 0;
+}
+
+/* Heading size in grid text*/
+.grid-text h3 {
+    color: #00BFFF;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* Image size and display in grid */
+.grid-image-wrapper, .grid-image {
+    max-width: 100%; 
+    max-height: 400px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for FAQ items */
+.faq-item {
+    background: #F0FFF0; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+    border-left: 5px solid #008080;
+    line-height: 1.6;
+}
+
+/* Styles for FAQ items heading */
+.faq-item h3 {
+    color: #008080; 
+    margin-bottom: 5px;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    width: calc(50% - 15px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #FF69B4;
+    line-height: 1.4;
+}
+
+.review-card h3 {
+    color: #FFD700; 
+    margin-bottom: 10px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery-item {
+    width: calc(50% - 20px); 
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+.gallery-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/*
+ ========================================
+     DOCTORS PAGE (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Container for all doctor profiles */
+.doctors-container {
+    padding: 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual doctor profile card */
+.doctor-card {
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Remove border from the last doctor card */
+.doctor-card:last-child {
+    border-bottom: none;
+}
+
+/* Flexbox setup for image and details layout */
+.doctor-card .flex-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Image wrapper column */
+.doctor-image-wrapper {
+    width: 30%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Details column */
+.doctor-details {
+    width: 70%;
+    text-align: left;
+}
+
+/* Reverses the layout for alternating cards */
+.doctor-card.reverse-flex {
+    flex-direction: row-reverse;
+}
+/* Re-aligns text and image when layout is reversed */
+.reverse-flex .doctor-image-wrapper {
+    text-align: right;
+}
+
+/* Doctor profile image styling */
+.doctor-image {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor name in image wrapper */
+.doctor-image-wrapper h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+/* Doctor name and title in details section */
+.doctor-details h2 {
+    font-size: 1.8em;
+    color: #00BFFF;
+    margin-bottom: 5px;
+}
+
+/* Paragraph text in details section */
+.doctor-details p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Doctor role and specialty in italic text */
+.doctor-role {
+    font-style: italic;
+    color: #008080;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Specialty heading */
+.doctor-details h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+/* Doctor memberships list styling */
+.doctor-memberships {
+    list-style: none;
+    padding-left: 0;
+}
+.doctor-memberships li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    font-size: 0.95em;
+    border-bottom: 1px dashed #eee;
+}
+
+/* Custom bullet point for memberships */
+.doctor-memberships li::before {
+    content: "•";
+    color: #FF69B4;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*
+ ========================================
+   CONTACT & BOOKING (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Container for contact method columns */
+.contact-methods-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card for the CTA to the booking form */
+.contact-card {
+    width: calc(50% - 20px);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Contact card heading */
+.contact-card h3 {
+    color: #00BFFF;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Card for direct contact details */
+.contact-details {
+    width: calc(50% - 20px);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact details section heading */
+.contact-details h3 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+}
+
+/* Unordered list for contact points */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual contact list item styling */
+.contact-list li {
+    margin-bottom: 25px;
+    border-left: 4px solid #00BFFF;
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
+/* Heading for contact details*/
+.contact-list h4 {
+    color: #00BFFF;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styling for phone and email links */
+.contact-list a{
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-list a:hover{
+    color: #e5669c;
+}
+
+/* Container for the embedded map */
+.map-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Map iframe size */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    display: block; 
+}
+
+/* Booking form container wrapper */
+.booking-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Individual form group spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form label styling */
+.booking-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #00BFFF;
+}
+
+/* Styling for all text input/select/textarea fields */
+.booking-form input[type="text"], .booking-form input[type="email"], .booking-form input[type="tel"], .booking-form select, .booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Allow vertical resizing for textarea */
+.booking-form textarea {
+    resize: vertical;
+}
+
+/*
+ ========================================
+ FOOTER (JANICE NG ZHENG YEN)
+ ========================================
+ */
+
+/* Footer base styling */
+footer{
+    background-color: #00BFFF;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
+/* Link color in the footer */
+footer a{
+    text-decoration: none;
+    color: #FFD700; 
+}
